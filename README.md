@@ -1,0 +1,8 @@
+ - Version de java: 17.0.6
+ - Version de Spring boot: v3.0.4
+ - Base de datos H2.
+ - La base de datos se carga por Hibernate basandose en las entidades, al momento del arranque.
+ - El proyecto cuenta con un DataLoader que se encarga de crear el usuario master o base para poder crear todos los demas con la seguridad del proyecto
+ - El proyecto cuenta con token jwt, que en base al requerimiento se está guardando al momento de crear usuarios, no se refresca y es netamente de prueba.
+ - El microservicio está con arquitectura REST y desacopla lo más posible la capa de persistencia de la de servicios y del controllador, dejando solo como clase de intercambio Model de Servicios
+ - Las validaciones de campos fueron ingresadas al Controller por que las anotaciones con el paquete Javax.validation no funcionaron correctamente con la version de Java en uso
